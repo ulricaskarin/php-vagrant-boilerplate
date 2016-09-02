@@ -20,26 +20,26 @@ Configure a remote php interpreter and remote web server (so the built in one is
 
 1. Start PhpStorm and make a project from the folder you created. Make sure Vagrant is still running the guest.
 
-2. Go to "File" -> "Settings" in the menu. Go to "Languages & Frameworks" -> "PHP".
+2. Go to "File" -> "Settings" (can also be "PhpStorm -> "Preferences") in the menu. Go to "Languages & Frameworks" -> "PHP".
 
 3. Click on the three dots to the right of the `<no interpreter>` text (may say 'PHP 7' or similar if you have a local installation since before).
 
-4. Click on the "+" button in the top left corner. Click on "remote".
+4. Click on the "+" button in the top left corner. Click on "Remote...".
 
-5. Click on Vagrant to the left in the dialogue and it will automatically find your guest installation. Click OK to save and click Yes on any SSH-key questions.
+5. Click on Vagrant to the left in the dialogue and it will automatically find your guest installation. Click OK to save and click Yes on any RSA-key questions. Click OK again to close dialogue.
 
 6. Check that PHP language level and interpreter is the same in the dialouge windows (5.5 for both). Click OK to close.
 
-7. Now we will setup a deploy environment to enable browser preview on remote server forcing PhpStorm not to use the built-in server. Go to "File" -> "Settings". Go to "Build, Execution, Deployment" -> "Deployment".
+7. Now we will setup a deploy environment to enable browser preview on remote server forcing PhpStorm not to use the built-in server. Go to "File" -> "Settings" (can also be "PhpStorm -> "Preferences"). Go to "Build, Execution, Deployment" -> "Deployment".
 
 8. Click on the "+" button in the top left.
 
 9. Name to remote server (Vagrant Web Server for example). Choose "Local or mounted folder". Click OK.
 
-10. Change `http://localhost` to `http://localhost:8080` as 8080 is the guest port being used for the remote web server.
+10. Change "Web server root URL" from `http://localhost` to `http://localhost:8080` as 8080 is the guest port being used for the remote web server.
 
 11. Go to the "Mappings" tab. Change "Local path:" to point to the `exercise` folder in the newly created exercise project.
 
-12. Add a `/` in the "Web path on server" field. Click OK to close.
+12. Add a `/` in the "Web path on server" field (if it is not already added). Click OK to close.
 
 12. We are now finished and will check that everything works. Go to the `index.php` file in the exercise folder and right click and choose "Open in Browser" and your prefered browser. You should now see the interpreted php-file on the remote server. (`http://localhost:8080/index.php`)
