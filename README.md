@@ -10,7 +10,7 @@ Make sure you have the following installed on your system:
 
 ## Get the repo and init Vagrant
 
-1. Clone (`git clone https://github.com/daalsmark/php-vagrant-template.git your-exercise-folder-name`) to create your exercise folder. 
+1. Clone (`git clone https://github.com/daalsmark/php-vagrant-boilerplate.git your-exercise-folder-name`) to create your exercise folder. 
 
 2. Go to the newly created folder and start the virtual machine using `vagrant up` in the terminal
 
